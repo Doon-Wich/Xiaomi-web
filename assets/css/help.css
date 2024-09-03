@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+
+
+#html{
+    
+}
+
+#wrapper{
+    width: 100%;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 54px;
+    width: 100%;
+    padding: 0 25px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.2);
+}
+
+#header .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+#separator{
+    flex-grow: 1;
+}
+
+#header .menu li a{
+    text-decoration: none;
+    color:#191919;
+}
+
+#header .menu2 ul{
+    line-height: 52px;
+    display: inline-block;
+}
+
+.menu2 .nav-item:hover li{
+    border-bottom: solid 3px #FC6800;
+}
+
+#header .menu2 li a{
+    padding: 16px;
+}
+
+#nav li{
+    
+}
+
+#nav > li > a{
+    line-height: 52px;
+    color: #191919;
+}
+
+#nav  li  a{
+    display: block;
+    text-decoration: none;
+    padding: 0 24px;
+}
+
+#nav  > li{
+    display: inline-block;
+}
+
+#nav, .submenu-list, .submenu-list2{
+    list-style-type: none;
+}
+
+#nav .submenu-list2,
+#nav .submenu-list{
+    display: none;
+    position: absolute;
+    height: 120px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #F7F7F7;
+    list-style-type: none;
+}
+
+#logo{
+    width: 48px;
+    height: 48px;
+}
+
+#nav li:hover .submenu-list2,
+#nav li:hover .submenu-list{
+    display: block;
+    background-color: #F7F7F7;
+    height: 9.2vw;
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    
+}
+
+
+#nav > li:hover > a{
+    border-bottom: solid #FC6800 3px;
+    
+}
+
+#logo .logo_link .image_change{
+    display: block;
+    max-width: 60px;
+    height: auto;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    text-align: center;
+    z-index: 20px;
+}
+
+#nav .submenu-list .subnav{
+    margin-top: 2.1vw;
+}
+
+#nav .submenu-list .Xiaomi{
+    max-width: 7.9vw;
+    height: auto;
+    transform: translateX(-40%);
+}
+
+#nav .submenu-list .Redmi{
+    max-width: 5vw;
+    height: auto;
+    transform: translateX(-40%);
+}
+
+#nav .submenu-list2 a{
+    margin-top: 2vw;
+}
+
+#nav .submenu-list2 .tvlogo{
+        position: absolute;
+        font-size: 1vw;
+        max-width: 13vw;
+        color:#191919;
+        font-weight: bolder;
+        margin-top: 2vw;
+        left: 48vw;
+    }
+
+#nav .submenu-list2 .fa-solid{
+    position: absolute;
+    font-size: 2.6vw;
+    padding: 18px;
+    left: 42vw;
+}
+
+#nav .submenu-list2 a:hover i,
+#nav .submenu-list2 a:hover .tvlogo{
+    color: #FC6800;
+}
+
+.navbar-collapse{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 80vw;
+}
+
+.nav-group .user-icon{
+    position: relative;
+}
+
+.search-icon{
+    cursor: pointer;
+}
+
+.navbar-collapse .dropdown{
+    display: block;
+    margin-top: 0;
+}
+
+#search-modal{
+    display: none;
+    background-color: #F7F7F7;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 15;
+    height: 50vh;
+}
+
+#lopphu{
+    display: none;
+    z-index: 1;
+    background-color: #191919b0;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 15;
+}
+
+#search-base{
+
+    max-width: 100%;
+    background-color: #fff;
+    height: 70vh;
+}
+
+.search-exit{
+    height: 30vh;
+    position: fixed;
+    z-index: 20px;
+}
+
+.search-base_container{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar .fa-solid{
+    padding: 12px 20px;
+    font-size: 25px;
+    color: grey;
+}
+
+.search-bar{
+    display: flex;
+    width: 50vw;
+    height: 55px;
+    border: solid 3px #F7F7F7;
+    border-radius: 15px;
+}
+
+.search{
+    border: solid 3px #fff;
+    width: 40vw;
+    
+}
+
+#content{
+    margin-top: 54px;
+    background-color: #F7F7F7;
+}
+
+.menu .card-body{
+    background-color: #F7F7F7;
+}
+
+.menu i{
+    background-color: #F7F7F7;
+}
+
+
+.col-lg-10{
+    background-color: #fff;
+    width: 90vw;
+}
+
+.col-lg-10:hover{
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.2);
+}
+
+.card{
+    background-color: #fff;
+}
+
+.title1:hover{
+    border-bottom: 0.2vw solid #000;
+}
+
+.card:hover {
+    color: #FC6800;
+}
+
+.title1{
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.title2{
+    font-size: 1.4vw;
+    color: #898989;
+}
+
+
+
+.card-body{
+    
+}
+
+#footer{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #000;
+    height: 40vh;
+    align-items: center;
+    color: #fff;
+    justify-content: space-around;
+    font-size: 20px;
+    position: relative;
+}
+
+#footer > .footer1{
+    display: flex;
+    flex-direction: row;    
+}
+
+#footer > .footer1 div{
+    padding: 0 6vw;     
+}
+
+#footer .footer1 .about,
+#footer .footer1 .help{
+    display: flex;
+    flex-direction: column;
+}
+
+#footer > .footer1 a{
+    text-decoration: none;
+    color: #898989;
+} 
+
+#footer span{
+    font-weight: 600;
+    color: #fff;
+}
+
+#footer a{
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#footer .help{
+    list-style: none;
+}
+
+#footer .follow{
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .footer1  a{
+    padding-top: 12px;
+}
+
+#footer .follow input{
+    width: 18vw;
+    height: 38px;
+    border-radius: 12px;
+    border: solid 2px #898989;
+    background-color: #000;
+}
+
+#footer .follow i{
+    font-size: 30px;
+    padding: 3px 10px;
+    color: #898989;
+    
+}
+
+#footer .follow li{
+}
+
+#footer .follow input::after{
+    width: 80vw;
+    height: 2px;
+    color: #fff;
+}
+
+#footer .endline{
+    position: absolute;
+    height: 1px;
+    width: 80vw;
+    background-color: #fff;
+    bottom: 5vh;
+}
+
+.hide{
+    display: none;
+}
+
+/* Mobile: width < 740px */ 
+@media only screen and (max-width: 46.2499em){
+    *{
+        font-size: 8px;
+    }
+    #header{
+    
+    }
+
+    #logo .logo_link .image_change{
+        width: 50px;
+        height: auto;
+        top: 12px;
+
+    }
+
+    #header .menu{
+        display: none;
+    }
+
+    .title{
+        height: 20vw;
+    }
+
+    .title1{
+        width: 35vw;
+    }
+
+    .card-text{
+        font-size: 3vw;
+    }
+
+    #footer{
+        flex-direction: column-reverse;
+        position: relative;
+        height: 50vw;
+    }
+    #footer .footer1{
+        display: none;
+    }
+
+    #footer .follow{
+        position: absolute;
+        top: 3vh;
+        left: 5vw;
+    }
+
+    #footer span{
+        font-size: 12px;
+    }
+
+    #footer .follow input{
+        width: 85vw;
+        height: 24px;       
+    }
+    #footer .follow  li{
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    *{
+        font-size: 8px;
+    }
+    #logo .logo_link .image_change{
+    width: 50px;
+    height: auto;
+    }
+    #footer{
+        flex-direction: column-reverse;  
+    }
+
+    #footer .follow{
+        display: flex;
+        flex-direction: row;
+        padding-right: 9vw;
+    }
+
+    #footer .follow div{
+        padding: 0 6vw;
+    }
+
+    #footer > .follow > .about,
+    #footer > .follow > .help{
+        display: inline-block;
+    }
+
+    #footer > .footer1 div{
+        padding-right: 17vw;
+        margin-bottom: 5vh;
+    }
+    #footer .follow input{
+        width: 30vw;
+        height: 24px;       
+    }
+
+    #footer span{
+        font-size: 18px;
+    }
+
+    #footer a{
+        font-size: 20px;
+    }
+
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64.0625em) {
+    .navbar-expand-md{
+        display: none;
+    }
+    
+}

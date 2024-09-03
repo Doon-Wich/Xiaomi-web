@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/item.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <!--[if lt IE 9]>
+         <script> src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"</script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>  
+    <div id="wrapper">
+        <div id="lopphu" onclick="closea()"></div>
+            <div id="search-modal">
+                <div class="search-base">
+                    <div class="search-base_container">
+                        <div class="search-bar" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search" type="text"  placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const closea =( )=>{
+                var x=document.getElementById("search-modal");
+                    x.style.display = "none";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "none";
+            }
+            function Search(){
+                var x=document.getElementById("search-modal");
+                    x.style.display = "block";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "block";
+                }
+        </script>
+        <div id="header">
+            <div id="logo">
+                <a class="logo_link"  href="http://127.0.0.1:5500/" >
+                    <img class="image_change" src="assets/img/Xiaomi-Logo-PNG.png" alt="Home"> 
+                </a> 
+            </div>
+            <div class="menu menu1">     
+                <ul id="nav">
+                        <li class="Phone">
+                            <a href="product.html">Điện Thoại</a>
+                                        <ul class="submenu-list">
+                                            <div class="subnav">
+                                                <li><a href="xiaomi.html"><img class="Xiaomi" src="assets/img/Xiaomi-logo.png" alt=""></a></li>
+                                                <li><a href="redmi.html"><img class="Redmi" src="assets/img/Redmi_by_Xiaomi_Logo.svg.png" alt=""></a></li>
+                                            </div>
+                                        </ul>  
+                        </li>
+                        <li class="Tivi">
+                            <a href="">Nhà Thông Minh</a>
+                                <div class="submenu-list2">
+                                    <a class="Tivi" href="tv.html">
+                                        <i class="fa-solid fa-tv"></i> 
+                                        <p class="tvlogo">TV & Phương Tiện</p>
+                                    </a> 
+                                </div>
+                        </li>
+                </ul>
+            </div>
+            <div id="separator"></div>
+            <div class="menu menu2">
+                <ul class="nav-item">
+                    <li> <a href="help.html">HỖ TRỢ</a> </li>
+                </ul>
+                <ul class="nav-group">
+                    <li class="search-icon" onclick="Search()"></a><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a class="user-icon" href="login.html"><i class="fa-regular fa-user"></i></a>
+                </ul>
+            </div>    
+            <nav class="navbar navbar-expand-md d-md-none navbar-light bg-light ">
+                <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginmb.html" >Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Điện thoại
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="redmi.html">Redmi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà thông minh
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="tv.html">Tivi & Phương tiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >HỖ TRỢ</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                </div>
+            </nav>
+        </div>
+        <div id="content">
+            <div class="xiaomi">
+                <h2>Xiaomi Series</h2>
+                <h4>A new era of exquisite design</h4>
+            </div>
+            <div class="slider">
+                <div class="title">
+                    <h1>Xiaomi 13T</h1>
+                    <h3>Tuyệt tác trong tầm tay</h3>
+                    <a href="13T.html"><button>Tìm hiểu thêm</button></a>
+                </div>  
+            </div>
+            <div id="section1">
+                <div class="phone phone1">
+                    <a href=""><h1 class="text1">Xiaomi 13T Pro</h1><h5 >Tuyệt tác trong tầm tay</h5><button class="more">Tìm hiểu thêm</button></a>
+                </div>
+                <div class="phone phone2">
+                    <a href=""><h1 class="text1">Xiaomi 13T</h1><h5>Tuyệt tác trong tầm tay</h5><button class="more">Tìm hiểu thêm</button></a>
+                </div>
+                <div class="phone phone3">
+                    <a href=""><h1 class="text1">Xiaomi 13 Pro</h1><h5 >Ẩn sau tuyệt tác</h5><button class="more">Tìm hiểu thêm</button></a>
+                </div>
+                <div class="phone phone4">
+                    <a href=""><h1 class="text1">Xiaomi 13</h1><h5 >Ẩn sau tuyệt tác</h5><button class="more">Tìm hiểu thêm</button></a>
+                </div>
+            </div>
+            <div id="section2">
+                <div class="subsection1">
+                    <div class="phone phone1">
+                        <a href=""><h1 class="text1">Xiaomi 12T Pro</h1><h5 >Kiến tạo siêu khoảnh khắc</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="phone phone2">
+                        <a href=""><h1 class="text1">Xiaomi 12T</h1><h5>Kiến tạo siêu khoảnh khắc</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                </div>
+                <div class="subsection2">
+                    <div class="phone phone3">
+                        <a href=""><h1 class="text1">Xiaomi 12 Pro</h1><h5 >Bậc thầy điện ảnh</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="findout">
+                        <a href="xiaomi.html"><h1 class="text1">Tất cả sản phẩm</h1><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                </div>
+                <div class="redmi">
+                    <h2>Redmi Series</h2>
+                    <h4>The Performance Race</h4> 
+                </div>
+                <div class="slider2">
+                    <div class="title">
+                        <div>Xiaomi Note <span>12</span> Pro</div>
+                        <a href="redmi.html"><button >Tìm hiểu thêm</button></a>
+                    </div>  
+                </div>
+            <div id="section3">
+                <div class="subsection1">
+                    <div class="phone phone1">
+                        <a href=""><h1 class="text1">Redmi Note 12S</h1><h5 >Camera chính đẳng cấp chuyên nghiệp 108MP</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="phone phone2">
+                        <a href=""><h1 class="text1">Redmi A2+</h1><h5>MediaTek Helio G36 Cảm biến vân tay</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                </div>
+                <div class="subsection2">
+                    <div class="phone phone3">
+                        <a href=""><h1 class="text1">Redmi Note 12 Pro 5G</h1><h5 >Camera IMX766 hàng đầu với OIS</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="findout">
+                        <a href="redmi.html"><h1 class="text1">Tất cả sản phẩm</h1><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="other">
+                <h2>TV & Phương tiện</h2>
+            </div>
+            <div id="section4">
+                <div class="tv0 tv1">
+                    <a href=""><h1 class="text1">Xiaomi TV A 43 FHD</h1><h5 >Muôn góc nhìn, Vạn trải nghiệm</h5><button class="more">Tìm hiểu thêm</button></a>
+                </div>
+                <div class="subsection3">
+                    <div class="tv tv2">
+                        <a href=""><h1 class="text1">Xiaomi TV A Pro 65</h1><h5>Muôn góc nhìn, Vạn trải nghiệm</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="tv tv3">
+                        <a href=""><h1 class="text1">Xiaomi TV A2 58</h1><h5 >Cuộc sống tiện nghi, tầm nhìn vô hạn</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="section5">
+                <div class="subsection1">
+                    <div class="tv tv1">
+                        <a href=""><h1 class="text1">Xiaomi TV A2 32</h1><h5 >Cuộc sống tiện nghi, tầm nhìn vô hạn</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="tv tv2">
+                        <a href=""><h1 class="text1">Mi Portable Bluetooth Speaker (16W)</h1><h5>ĐƯA ÂM NHẠC VÀO ĐỜI SỐNG</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                </div>
+                <div class="subsection2">
+                    <div class="tv tv3">
+                        <a href=""><h1 class="text1">Mi Smart Projector 2</h1><h5 >Rạp hát tại gia di động của bạn</h5><button class="more">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="findout">
+                        <a href="tv.html"><h1 class="text1">Tất cả sản phẩm</h1><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="footer">
+            <div class="footer1">
+                <div class="help">
+                    <li><a href=""><span>HỖ TRỢ</span></a></li>
+                    <li><a href="">Hướng dẫn sử dụng</a></li>
+                    <a href="">Bảo hành</h4></a>
+                    <a href="">Email</a>
+                </div>
+                <div class="about">
+                    <a href=""><span>GIỚI THIỆU</span></a>
+                    <a href="">Xiaomi</a>
+                    <a href="">Chính sách riêng tư</a>
+                    <a href="">MIUI</a>
+                </div>
+            </div>
+            <div class="follow">
+                <div class="row1">
+                    <a href="" class="MIfollow"><span>THEO DÕI MI</span></a>
+                    <li class="brandicons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </div>
+                <div class="row2">
+                    <a><span>HÃY ĐỂ CHÚNG TÔI LIÊN LẠC VỚI BẠN</span></a>
+                    <li><input type="text" placeholder="Email/số điện thoại"></li>
+                </div>
+            </div>
+            <div class="endline"></div> 
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

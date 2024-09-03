@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+
+
+#html{
+    
+}
+
+#wrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 54px;
+    width: 100%;
+    padding: 0 25px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.2);
+}
+
+#header .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+#separator{
+    flex-grow: 1;
+}
+
+#header .menu li a{
+    text-decoration: none;
+    color:#191919;
+}
+
+#header .menu2 ul{
+    line-height: 52px;
+    display: inline-block;
+}
+
+.menu2 .nav-item:hover li{
+    border-bottom: solid 3px #FC6800;
+}
+
+#header .menu2 li a{
+    padding: 16px;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    line-height: 52px;
+    color: #191919;
+}
+
+#nav  li  a{
+    display: block;
+    text-decoration: none;
+    padding: 0 24px;
+}
+
+#nav  > li{
+    display: inline-block;
+}
+
+#nav, .submenu-list, .submenu-list2{
+    list-style-type: none;
+}
+
+#header .submenu-list{
+    display: none;
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #F7F7F7;
+    list-style-type: none;
+}
+
+#logo{
+    width: 48px;
+    height: 48px;
+}
+
+#nav .submenu-list2{
+    /* display: none; */
+    position: absolute;
+    height: 140px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #F7F7F7;
+    list-style-type: none;
+}
+
+#nav li:hover .submenu-list2,
+#nav li:hover .submenu-list{
+    display: block;
+}
+
+
+#nav > li:hover > a{
+    border-bottom: solid #FC6800 3px;
+    
+}
+
+#logo .logo_link .image_change{
+    display: block;
+    max-width: 60px;
+    height: auto;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    text-align: center;
+}
+
+#nav .submenu-list .Xiaomi{
+    max-width: 100px;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    transform: translateX(-65%);
+}
+
+#nav .submenu-list .Redmi{
+    max-width: 70px;
+    height: auto;
+    position: absolute;
+    top: 25px;
+    transform: translateX(-70%);
+}
+
+#nav .submenu-list2 li{
+    height: 70px; 
+}
+
+#nav .submenu-list2 li a{
+        position: absolute;
+        font-size: 15px;
+        max-width: 200px;
+        top: 45%;
+        text-align: center;
+        color:#191919;
+        font-weight: bolder;
+    }
+
+#nav .submenu-list2 .fa-solid{
+    position: absolute;
+    font-size: 40px;
+    padding: 18px;
+    top: 50%;
+}
+
+.navbar-collapse{
+    margin-top: 50px;
+}
+
+.navbar-toggler{
+    right: 0px;
+
+}
+
+#slider{
+    margin-top: 54px;
+    padding-top: 40%;
+    background: url('/assets/img/slider.webp') top center / cover no-repeat;
+    background-color: #F7F7F7;
+}
+
+#content{
+    height: 1800px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+
+#section1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section1 .phone1,
+#section1 .phone2{
+    height: 480px;
+    width: 736px;
+    margin-top: 15px;
+    position: relative;
+}
+
+#section1 .phone1 a,
+#section1 .phone2 a{
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    color:#191919;
+    padding-top: 8%;
+    align-items: center;
+    text-transform:capitalize;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phone1 a span{
+    color: red;
+}
+
+#content .more{
+    color:#FC6800;
+    text-align: center;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+#section2 .item:hover,
+#section1 .phone:hover{
+    box-shadow: 0px 10px 10px rgba(128, 128, 128, 0.2);
+    transition: 0.3s;
+}
+
+#content .more:hover{
+    border-bottom: solid 2px #FC6800;
+}
+
+#section1 .phone1{
+    background: url('/assets/img/phone1.png') top center / cover no-repeat;
+}
+
+#section1 .phone2{
+    background: url('/assets/img/phone2.png') top center / cover no-repeat;
+
+}
+
+#section2{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section2 .item1{
+    height: 480px;
+    width: 736px;
+    background: url('/assets/img/xiaoband.png') top center / cover no-repeat; 
+    position: relative;
+}
+
+#section2 .item3,
+#section2 .item2{
+    height: 480px;
+    width: 360px;
+    position: relative;
+}
+
+
+#section2 .item2{
+    background: url('/assets/img/xiaomipad6.png') top center / cover no-repeat;
+}
+
+#section2 .item3{
+    background: url('/assets/img/watch3pro.jpg') top center / cover no-repeat;
+}
+
+#section2 .item2 a,
+#section2 .item3 a,
+#section2 .item1 a{
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    color:#191919;
+    padding-top: 8%;
+    align-items: center;
+    text-transform:capitalize;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#footer{
+}
+
+/* Mobile: width < 740px */ 
+@media only screen and (max-width: 46.2499em){
+    *{
+        font-size: 8px;
+    }
+    #header{
+    
+    }
+
+    #logo .logo_link .image_change{
+        width: 50px;
+        height: auto;
+        top: 12px;
+
+    }
+
+    #header .menu{
+        display: none;
+    }
+    
+    #slider{
+        margin-top: 54px;
+        padding-top: 130%;
+        background: url('/assets/img/sliderres1.webp') top center / 200% no-repeat;
+    }
+    
+    #section2 .item1,
+    #section1 .phone1,
+    #section1 .phone2{
+    margin-top: 5px;
+    height: 462px;
+    width: 100%;
+    }
+    
+    #section2{
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+
+    /* #section2, */
+    #section1{
+        flex-direction: column;
+    }
+    #section2 .item1{
+        height: 462px;
+        width: 100%;
+    }
+    
+    #section2 .item3,
+    #section2 .item2{
+        margin-top: 5px;
+        height: 250px;
+        width: 140px;
+    }
+}
+/* Tablet: width >= 740 and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    *{
+        font-size: 8px;
+    }
+    #logo .logo_link .image_change{
+    width: 50px;
+    height: auto;
+    }
+    #nav  li  a{
+        padding: 0 12px;
+    }
+    #section1 .phone1,
+    #section1 .phone2{
+        height: 242px;
+        width: 366px;
+    }
+    #section2 .item1{
+        height: 242px;
+        width: 366px;
+    }
+    
+    #section2{
+        margin-top: 5px;
+    }
+
+    #section2 > .item3,
+    #section2 > .item2{
+        
+        height: 242px;
+        width: 180px;
+    }
+    #section2 .item2 a,
+    #section2 .item3 a,
+    #section2 .item1 a{
+        padding-top: 2%;
+    }
+    #content .more{
+        margin-top: 0;
+    }
+    
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64.0625em) {
+    .navbar-expand-md{
+        display: none;
+    }
+    
+}
+

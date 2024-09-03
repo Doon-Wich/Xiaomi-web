@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <!--[if lt IE 9]>
+         <script> src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"</script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $(".charge").offset().top - 0.6*$(".charge").height()) {
+                    $(".case2").show();
+                    $(".case1").hide();
+                    document.querySelectorAll(".case2")[0].classList.add("fadeIn");
+                } else {
+                    $(".case1").show();
+                    $(".case2").hide();
+                    document.querySelectorAll(".case1")[0].classList.add("fadeIn");
+                }
+            });
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $(".detail4").offset().top + 0.07*$(".detail4").height()) {
+                    $(".camera1").show();
+                    $(".camera2").hide();
+                    $(".camera3").hide();
+                }
+                if ($(window).scrollTop() > $(".detail4").offset().top + 0.1*$(".detail4").height()) {
+                    $(".camera2").css("display","flex");
+                    $(".camera1").hide();
+                    $(".camera2").show();
+                    $(".camera3").hide();
+                }
+                if($(window).scrollTop() > $(".detail4").offset().top + 0.18*$(".detail4").height()) {
+                    $(".camera3").css("display","flex");
+                    $(".camera1").hide();
+                    $(".camera2").hide();
+                    $(".camera3").show();
+                }
+            });
+        });  
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="lopphu" onclick="closea()"></div>
+            <div id="search-modal">
+                <div class="search-base">
+                    <div class="search-base_container">
+                        <div class="search-bar" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search" type="text"  placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const closea =( )=>{
+                var x=document.getElementById("search-modal");
+                    x.style.display = "none";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "none";
+            }
+            function Search(){
+                var x=document.getElementById("search-modal");
+                    x.style.display = "block";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "block";
+                }
+        </script>
+        <div id="header">
+            <div id="logo">
+                <a class="logo_link"  href="http://127.0.0.1:5500/" >
+                    <img class="image_change" src="assets/img/Xiaomi-Logo-PNG.png" alt="Home"> 
+                </a> 
+            </div>
+            <div class="menu menu1">     
+                <ul id="nav">
+                        <li class="Phone">
+                            <a href="xiaomi.html">Điện Thoại</a>
+                                        <ul class="submenu-list">
+                                            <div>
+                                                <li><a href=""><img class="Xiaomi" src="assets/img/Xiaomi-logo.png" alt=""></a></li>
+                                                <li><a href=""><img class="Redmi" src="assets/img/Redmi_by_Xiaomi_Logo.svg.png" alt=""></a></li>
+                                            </div>
+                                        </ul>  
+                        </li>
+                        <li class="Tivi">
+                            <a href="">Nhà Thông Minh</a>
+                                <ul class="submenu-list2">
+                                    <li> <a class="Tivi" href=""><i class="fa-solid fa-tv"></i> <span class="tvlogo">TV & Phương Tiện</span></a> </li>
+                                </ul>
+                        </li>
+                </ul>
+            </div>
+            <div id="separator"></div>
+            <div class="menu menu2">
+                <ul class="nav-item">
+                    <li> <a href="help.html">HỖ TRỢ</a> </li>
+                </ul>
+                <ul class="nav-group">
+                    <li class="search-icon" onclick="Search()"></a><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a class="user-icon" href="login.html"><i class="fa-regular fa-user"></i></a>
+                </ul>
+            </div>    
+            <nav class="navbar navbar-expand-md d-md-none navbar-light bg-light ">
+                <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginmb.html" >Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Điện thoại
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="redmi.html">Redmi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown2">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà thông minh
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="tv.html">Tivi & Phương tiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >HỖ TRỢ</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                </div>
+            </nav>
+        </div>
+        
+        <div id="content">
+            <div class="navbar1">
+                <div class="title"><h1>Xiaomi 13T Pro</h1></div>
+                <div class="subnav1">
+                    <ul>
+                        <li ><a class="general" href="13T.html">Tổng quan</a></li>
+                        <li ><a href="detail.html">Thông số</a></li>
+                        <li><button>Mua ngay</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="slideshow">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" type="green">
+                            <img class="image"  src="assets/img/detail/grn1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="green">
+                            <img class="image"  src="assets/img/detail/grn2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="green">
+                            <img class="image"  src="assets/img/detail/grn3.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="green">
+                            <img class="image"  src="assets/img/detail/grn4.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="green">
+                            <img class="image"  src="assets/img/detail/grn5.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="blue">
+                            <img class="image"  src="assets/img/detail/blue1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="blue">
+                            <img class="image"  src="assets/img/detail/blue2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="blue">
+                            <img class="image"  src="assets/img/detail/blue3.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="red">
+                            <img class="image"  src="assets/img/detail/red1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="red">
+                            <img class="image"  src="assets/img/detail/red2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" type="red">
+                            <img class="image"  src="assets/img/detail/red3.jpg" alt="">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div> 
+            <div class="button">
+                <div class="btn"><button type="red" ><img src="assets/img/detail/btn1.webp" alt=""></button><span>Đen</span></div>
+                <div class="btn"><button type="green" ><img src="assets/img/detail/btn2.webp" alt=""></button><span>Xanh đồng cỏ</span></div>
+                <div class="btn"><button type="blue"><img src="assets/img/detail/btn3.webp" alt=""></button><span>Xanh dương Alpine</span></div>
+            </div>
+            <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Bộ xử lý</h1>
+                  <p class="card-text">MediaTek Dimensity 9200+ <br>
+                    Tiến trình sản xuất tiết kiệm năng lượng 4nm <br> <br>
+                    
+                    CPU: <br>
+                    1x Arm Cortex-X3, lên đến 3,35GHz <br>
+                    3x Arm Cortex-A715, lên đến 3,0GHz <br>
+                    4x Arm Cortex-A510, lên đến 2,0GHz <br> <br>
+                    GPU: Arm Immortalis-G715</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Bộ nhớ & RAM</h1>
+                  <p class="card-text">12GB + 256GB, 12GB + 512GB <br>
+                    RAM LPDDR5X + bộ nhớ UFS 4.0 <br> <br>
+                    *Dung lượng lưu trữ có thể sử dụng và RAM ít hơn <br>
+                    tổng bộ nhớ do lưu trữ hệ điều hành và phần mềm được cài đặt sẵn trên thiết bị.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Kích thước</h1>
+                  <p class="card-text">Kính: 162,2mm x 75,7mm x 8,49mm I PU: 162,2mm x 75,7mm x 8,62mm <br> <br>
+                    *Dữ liệu được thử nghiệm trong Phòng thí nghiệm nội bộ của Xiaomi, kết quả thực tế có thể sẽ khác.Kính: 206g I PU: 200g <br>
+                    *Dữ liệu được thử nghiệm trong Phòng thí nghiệm nội bộ của Xiaomi, kết quả thực tế có thể sẽ khác.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Màn hình</h1>
+                  <p class="card-text">Màn hình phẳng <br> <br>
+                    AMOLED 6,67" FHD+20:9, 2712 x 1220446 ppi <br>
+                    Tốc độ làm mới lên đến 144Hz* <br>
+                    *Màn hình hỗ trợ tốc độ làm mới tối đa là 144Hz. Tốc độ làm mới màn hình có thể sẽ <br>
+                    hơi khác tùy vào giao diện ứng dụng và chất lượng hình ảnh trò chơi khác nhau.  <br>
+                    Vui lòng dựa vào trải nghiệm thực tế. <br>
+                    AdaptiveSync <br> <br>
+                    Tốc độ lấy mẫu cảm ứng: lên đến 480Hz <br>
+                    *Tốc độ lấy mẫu cảm ứng có thể khác nhau tùy theo nội dung trên màn hình của bạn. <br>
+                    Độ sáng: HBM 1200 nit (thông thường)*, độ sáng cao nhất 2600 nit* <br>
+                    *Dữ liệu được thử nghiệm trong Phòng thí nghiệm nội bộ của Xiaomi, kết quả thực tế <br>
+                    có thể sẽ khác. <br>
+                    16000 mức điều chỉnh độ sáng <br> <br>
+                    Màn hình Pro HDR ｜Dolby Vision® ｜ HDR sống động ｜ HDR10+ ｜ HDR10 <br>
+                    Gam màu: DCI-P3 ｜68 tỷ màu ｜Hiển thị chân thực <br>
+                    Màn hình TrueColor: JNCD≈ 0,32, Delta E≈ 0,37* <br> <br>
+                    *Dữ liệu được thử nghiệm trong Phòng thí nghiệm nội bộ của Xiaomi, kết quả thực tế <br>
+                    có thể sẽ khác. <br>
+                    Tần số giảm độ sáng bằng PWM 2880Hz ｜Chế độ đọc sách tự thích ứng ｜Chế độ <br>
+                    nắng mạnh ｜Corning®️ Gorilla®️ Glass 5</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Camera sau</h1>
+                  <p class="card-text">Ống kính quang học chuyên nghiệp của Leica  <br> <br>
+                    LEICA VARIO-SUMMICRON 1:1,9-2,2/15-50mm ASPH. <br>
+                    Camera chính Leica <br> 
+                    Kích thước cảm biến 1/1,28”50MP <br>
+                    Điểm ảnh kích thước 1,22μm, Siêu điểm ảnh 4 trong 1  <br>
+                    kích thước 2,44μm <br>
+                    Độ dài tiêu cự tương đương 24mmf/1,9 <br> 
+                    Chống rung quang học OISIMX707ALD <br> <br>
+                    Ống kính 7P <br>
+                    Lấy nét tự động <br>
+                    Camera chụp xa Leica 50MP <br> <br>
+                    Kích thước cảm biến 1/2,88” <br>
+                    Kích thước điểm ảnh 0,61μm <br>
+                    Độ dài tiêu cự tương đương 50mmf/1,9 <br>
+                    Ống kính 5P <br> <br>
+                    Lấy nét tự động <br>
+                    OV50D <br>
+                    Thu phóng kỹ thuật số lên tới 20 lần <br>
+                    Camera góc siêu rộng Leica12MP <br> <br>
+                    Kích thước cảm biến 1/3,06" <br>
+                </p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Camera trước</h1>
+                  <p class="card-text">Camera trước 20MPf/2,2 <br>  <br>
+                    Kích thước điểm ảnh 0,8μm <br>
+                    FOV 78° <br>
+                    Ống kính 5P <br> <br>
+                    Tính năng chụp ảnh của camera trước <br> <br>
+                    Chế độ ban đêm <br>
+                    HDR <br>
+                    Chế độ chân dung <br>
+                    Tính năng chụp ảnh bằng lòng bàn tay <br> 
+                    Chụp liên tục có hẹn giờ <br>
+                    Khung hình phim <br>
+                    Bộ hẹn giờ tự chụp chân dung <br>
+                    Tính năng quay video của camera trước <br> <br>
+                    Quay video HDR với HDR10+ lên đến 1080p ở tốc độ 30 fps <br>
+                    Quay video HD 1080p (1920x1080) ở tốc độ 30 fps <br>
+                    Quay video HD 720p (1280x720) ở tốc độ 30 fps <br>
+                    Máy nhắc chữ <br>
+                    Phim ngắn <br>
+                    Video chuyển động chậm: 120fps <br>
+                    Tua nhanh thời gian</p> <br>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Pin & Sạc</h1>
+                  <p class="card-text">Hệ thống quản lý pin Xiaomi Surge <br>
+                    Chipset sạc Xiaomi Surge <br>
+                    Chipset quản lý pin Xiaomi Surge <br> <br>
+                    Sạc nhanh 120W HyperCharge <br>  <br>
+                    19 phút đến 100% (Chế độ tăng tốc)  <br>
+                    24 phút đến 100% (Chế độ tiêu chuẩn) <br>
+                    USB Type-C <br> <br>
+                    Pin 5000mAh (thông thường) <br> <br>
+                    Phát video lên tới 17 giờ <br>
+                    Quay video 1080p lên tới 5 giờ <br>
+                    Thời lượng phát nhạc lên đến 73 giờ</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Bảo mật & xác thực</h1>
+                  <p class="card-text">Cảm biến vân tay dưới màn hình <br>
+                    Mở khóa bằng khuôn mặt AI</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">NFC</h1>
+                  <p class="card-text">Có</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Mạng & Kết nối</h1>
+                  <p class="card-text">Hai SIM (nano SIM + nano SIM hoặc nano SIM + eSim)
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Âm thanh</h1>
+                  <p class="card-text">Loa kép <br>
+                    Dolby Atmos®  <br> <br>
+                    Phát âm thanh <br>
+                    Hỗ trợ các định dạng âm thanh như MP3, FLAC, APE, AAC, OGG, WAV, AMR, AWB <br>
+                    Chứng nhận Hi-Res Audio <br> <br>
+                    Phát video <br>
+                    MP4丨MKV丨WEBM丨3GP <br>
+                    Hỗ trợ chế độ hiển thị HDR khi phát nội dung video sử dụng  <br>
+                    công nghệ HDR10, HDR10+, Dolby Vision</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Chống nước, tia nước bắn và bụi</h1>
+                  <p class="card-text">P68</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title1">Cảm biến</h1>
+                  <p class="card-text">Cảm biến tiệm cận | Cảm biến ánh sáng xung quanh 360° | Gia tốc kế | Con quay hồi <br>
+                    chuyển | La bàn điện tử | Động cơ tuyến tính | Bộ điều khiển hồng ngoại | Cảm biến <br>
+                    ánh sáng nhấp nháy | Cảm biến màu</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Hệ điều hành</h1>
+                  <p class="card-text">MIUI 14, Android 13</p>
+                </div>
+              </div>
+              <div class="card" style="width: 100vw;">
+                <div class="card-body">
+                  <h1 class="card-title">Bộ sản phẩm gồm</h1>
+                  <p class="card-text">Điện thoại di động / Bộ sạc / Cáp USB Type C / <br>
+                    Que chọc SIM / Hướng dẫn bắt đầu nhanh / <br>
+                    Thẻ bảo hành / Thông tin an toàn / Ốp lưng</p>
+                </div>
+              </div>
+        </div>
+        <div id="footer">
+            <div class="footer1">
+                <div class="help">
+                    <li><a href=""><span>HỖ TRỢ</span></a></li>
+                    <li><a href="">Hướng dẫn sử dụng</a></li>
+                    <a href="">Bảo hành</h4></a>
+                    <a href="">Email</a>
+                </div>
+                <div class="about">
+                    <a href=""><span>GIỚI THIỆU</span></a>
+                    <a href="">Xiaomi</a>
+                    <a href="">Chính sách riêng tư</a>
+                    <a href="">MIUI</a>
+                </div>
+            </div>
+            <div class="follow">
+                <div class="row1">
+                    <a href="" class="MIfollow"><span>THEO DÕI MI</span></a>
+                    <li class="brandicons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </div>
+                <div class="row2">
+                    <a><span>HÃY ĐỂ CHÚNG TÔI LIÊN LẠC VỚI BẠN</span></a>
+                    <li><input type="text" placeholder="Email/số điện thoại"></li>
+                </div>
+            </div>
+            <div class="endline"></div> 
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="13T.js"></script>
+<script src="app.js"></script>
+

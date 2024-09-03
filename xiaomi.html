@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/xiaomi.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <!--[if lt IE 9]>
+         <script> src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"</script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    
+    
+</head>
+<body>  
+    <div id="wrapper">
+        <div id="lopphu" onclick="closea()"></div>
+            <div id="search-modal">
+                <div class="search-base">
+                    <div class="search-base_container">
+                        <div class="search-bar" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search" type="text"  placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const closea =( )=>{
+                var x=document.getElementById("search-modal");
+                    x.style.display = "none";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "none";
+            }
+            function Search(){
+                var x=document.getElementById("search-modal");
+                    x.style.display = "block";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "block";
+                }
+        </script>
+        <div id="header">
+            <div id="logo">
+                <a class="logo_link"  href="http://127.0.0.1:5500/" >
+                    <img class="image_change" src="assets/img/Xiaomi-Logo-PNG.png" alt="Home"> 
+                </a> 
+            </div>
+            <div class="menu menu1">     
+                <ul id="nav">
+                        <li class="Phone">
+                            <a href="product.html">Điện Thoại</a>
+                                        <ul class="submenu-list">
+                                            <div class="subnav">
+                                                <li><a href="xiaomi.html"><img class="Xiaomi" src="assets/img/Xiaomi-logo.png" alt=""></a></li>
+                                                <li><a href="redmi.html"><img class="Redmi" src="assets/img/Redmi_by_Xiaomi_Logo.svg.png" alt=""></a></li>
+                                            </div>
+                                        </ul>  
+                        </li>
+                        <li class="Tivi">
+                            <a href="">Nhà Thông Minh</a>
+                                <div class="submenu-list2">
+                                    <a class="Tivi" href="tv.html">
+                                        <i class="fa-solid fa-tv"></i> 
+                                        <p class="tvlogo">TV & Phương Tiện</p>
+                                    </a> 
+                                </div>
+                        </li>
+                </ul>
+            </div>
+            <div id="separator"></div>
+            <div class="menu menu2">
+                <ul class="nav-item">
+                    <li> <a href="help.html">HỖ TRỢ</a> </li>
+                </ul>
+                <ul class="nav-group">
+                    <li class="search-icon" onclick="Search()"></a><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a class="user-icon" href="login.html"><i class="fa-regular fa-user"></i></a>
+                </ul>
+            </div>    
+            <nav class="navbar navbar-expand-md d-md-none navbar-light bg-light ">
+                <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginmb.html" >Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Điện thoại
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="redmi.html">Redmi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà thông minh
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="tv.html">Tivi & Phương tiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >HỖ TRỢ</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Tìm kiếm">
+                        <button class="btn btn-outline-success">Search</button>
+                        </form>
+                </div>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="filter">
+                <div class="title">Tất cả sản phẩm </div>
+                <div class="menu">
+                    <div class="dropdown">
+                        <div>Danh mục</div>
+                        <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div class="down"><i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <div class="subnav">
+                        <a href="all.html">Tất cả sản phẩm</a>
+                        <a style="color: #FC6800;" href="xiaomi.html">Dòng Xiaomi</a>
+                        <a  href="redmi.html">Dòng Redmi</a>
+                        <a  href="tv.html">Tv & Phương tiện</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <script>
+                    jQuery.fn.extend({
+                        setMenu:function () {
+                            return this.each(function() {
+                                var containermenu = $(this);
+                
+                                var itemmenu = containermenu.find('.dropdown');
+                                itemmenu.click(function () {
+                                    var submenuitem = containermenu.find('.subnav');
+                                    submenuitem.slideToggle(500);
+                
+                                });
+                
+                                $(document).click(function (e) {
+                                    if (!containermenu.is(e.target) &&
+                                        containermenu.has(e.target).length === 0) {
+                                        var isopened =
+                                            containermenu.find('.subnav').css("display");
+                
+                                        if (isopened == 'flex') {
+                                            containermenu.find('.subnav').slideToggle(500);
+                                        }
+                                    }
+                                });
+                
+                
+                
+                            });
+                        },
+                
+                    });
+                
+                
+                    $('.menu').setMenu();
+                </script>
+                <div class="row">
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer1">
+                <div class="help">
+                    <li><a href=""><span>HỖ TRỢ</span></a></li>
+                    <li><a href="">Hướng dẫn sử dụng</a></li>
+                    <a href="">Bảo hành</h4></a>
+                    <a href="">Email</a>
+                </div>
+                <div class="about">
+                    <a href=""><span>GIỚI THIỆU</span></a>
+                    <a href="">Xiaomi</a>
+                    <a href="">Chính sách riêng tư</a>
+                    <a href="">MIUI</a>
+                </div>
+            </div>
+            <div class="follow">
+                <div class="row1">
+                    <a href="" class="MIfollow"><span>THEO DÕI MI</span></a>
+                    <li class="brandicons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </div>
+                <div class="row2">
+                    <a><span>HÃY ĐỂ CHÚNG TÔI LIÊN LẠC VỚI BẠN</span></a>
+                    <li><input type="text" placeholder="Email/số điện thoại"></li>
+                </div>
+            </div>
+            <div class="endline"></div> 
+        </div>
+    </div>
+    <script src="xiaomi.js"></script>
+</body>
+</html>

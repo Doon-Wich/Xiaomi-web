@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/13T.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <!--[if lt IE 9]>
+         <script> src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"</script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $(".charge").offset().top - 0.6*$(".charge").height()) {
+                    $(".case2").show();
+                    $(".case1").hide();
+                    document.querySelectorAll(".case2")[0].classList.add("fadeIn");
+                } else {
+                    $(".case1").show();
+                    $(".case2").hide();
+                    document.querySelectorAll(".case1")[0].classList.add("fadeIn");
+                }
+            });
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $(".detail4").offset().top + 0.07*$(".detail4").height()) {
+                    $(".camera1").show();
+                    $(".camera2").hide();
+                    $(".camera3").hide();
+                }
+                if ($(window).scrollTop() > $(".detail4").offset().top + 0.1*$(".detail4").height()) {
+                    $(".camera2").css("display","flex");
+                    $(".camera1").hide();
+                    $(".camera2").show();
+                    $(".camera3").hide();
+                }
+                if($(window).scrollTop() > $(".detail4").offset().top + 0.18*$(".detail4").height()) {
+                    $(".camera3").css("display","flex");
+                    $(".camera1").hide();
+                    $(".camera2").hide();
+                    $(".camera3").show();
+                }
+            });
+        });  
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="lopphu" onclick="closea()"></div>
+            <div id="search-modal">
+                <div class="search-base">
+                    <div class="search-base_container">
+                        <div class="search-bar" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search" type="text"  placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const closea =( )=>{
+                var x=document.getElementById("search-modal");
+                    x.style.display = "none";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "none";
+            }
+            function Search(){
+                var x=document.getElementById("search-modal");
+                    x.style.display = "block";
+                    var y = document.getElementById("lopphu")
+                    y.style.display = "block";
+                }
+        </script>
+        <div id="header">
+            <div id="logo">
+                <a class="logo_link"  href="http://127.0.0.1:5500/" >
+                    <img class="image_change" src="assets/img/Xiaomi-Logo-PNG.png" alt="Home"> 
+                </a> 
+            </div>
+            <div class="menu menu1">     
+                <ul id="nav">
+                        <li class="Phone">
+                            <a href="product.html">Điện Thoại</a>
+                                        <ul class="submenu-list">
+                                            <div>
+                                                <li><a href="xiaomi.html"><img class="Xiaomi" src="assets/img/Xiaomi-logo.png" alt=""></a></li>
+                                                <li><a href="redmi.html"><img class="Redmi" src="assets/img/Redmi_by_Xiaomi_Logo.svg.png" alt=""></a></li>
+                                            </div>
+                                        </ul>  
+                        </li>
+                        <li class="Tivi">
+                            <a href="">Nhà Thông Minh</a>
+                                <ul class="submenu-list2">
+                                    <li> <a class="Tivi" href="tv.html"><i class="fa-solid fa-tv"></i> <span class="tvlogo">TV & Phương Tiện</span></a> </li>
+                                </ul>
+                        </li>
+                </ul>
+            </div>
+            <div id="separator"></div>
+            <div class="menu menu2">
+                <ul class="nav-item">
+                    <li> <a href="help.html">HỖ TRỢ</a> </li>
+                </ul>
+                <ul class="nav-group">
+                    <li class="search-icon" onclick="Search()"></a><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a class="user-icon" href="login.html"><i class="fa-regular fa-user"></i></a>
+                </ul>
+            </div>    
+            <nav class="navbar navbar-expand-md d-md-none navbar-light bg-light ">
+                <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginmb.html" >Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Điện thoại
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="redmi.html">Redmi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nhà thông minh
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="tv.html">Tivi & Phương tiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >HỖ TRỢ</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                </div>
+            </nav>
+        </div>
+        
+        <div id="content">
+            <div class="navbar1">
+                <div class="title"><h1>Xiaomi 13T Pro</h1></div>
+                <div class="subnav1">
+                    <ul>
+                        <li ><a class="general" href="">Tổng quan</a></li>
+                        <li ><a href="detail.html">Thông số</a></li>
+                        <li><button>Mua ngay</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="title1">
+                    <img src="assets/img/13T/titlte.png" alt="">
+                    <h1>Tuyệt tác trong tầm tay </h1>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="detail">
+                    <div class="goup sec1">
+                        <div class="h1">Hệ thống camera chuyên nghiệp của Leica</div>
+                        <div class="h2">Ống kính quang học chuyên nghiệp của Leica Hai phong cách chụp ảnh của Leica</div>
+                        <div class="h1">Trạm video chuyên nghiệp</div>
+                        <div class="h2">Quay video 8K và quay video Log 10 bit</div>
+                    </div>
+                    <div class="move">
+                        <img class="moveimg" src="assets/img/13T/goup13T.webp" alt="">
+                    </div>
+                </div>
+                <div class="detail1">
+                    <div class="screen">
+                        <div class="goup sec2">
+                            <div class="h1">Màn hình 144Hz CrytalRes AMOLED*</div>
+                            <div class="h2">Chi tiết đáng kinh ngạc với khả năng phản hồi siêu mượt</div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="water" >
+                            <video loop autoplay>
+                                <source src="/assets/video/ksp-water.mp4">
+                            </video>
+                            <div>
+                                <div class="h1">Chống nước & bụi theo tiêu chuẩn IP68*</div>
+                                <div class="h2">Được thiết kế cho nhiều tình huống hơn</div>
+                            </div>
+                        </div>
+                        <div class="chip">
+                            <div class="goup sec4">
+                                <div class="h1">MediaTek Dimensity 9200+</div>
+                                <div class="h2">Hiệu năng cao cấp, hiệu quả cực cao</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail2">
+                    <div class="charge">
+                        <div class="case1">
+                            <div class="h1">19 phút đến 100%*</div>
+                            <div class="h2">Được trang bị công nghệ 120W HyperCharge*</div>
+                        </div>
+                        <div class="case2">
+                            <div class="h1">Phát video lên tới 17 giờ*</div>
+                            <div class="h2">Pin dung lượng lớn 5000mAh (thông thường)</div>
+                        </div>
+                    </div>
+                    <video autoplay loop>
+                        <source src="assets/video/charge.mp4">
+                    </video>
+                </div>
+                <div class="detail3">
+                    <div class="title">
+                        <div class="goup sec5">
+                            <span>CAMERA</span>
+                            <div class="h1">
+                                Hình ảnh chất lượng Leica chân thực
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title1">
+                        <div class="goup sec6">
+                            <p>Ống kính Summicron, được hợp tác phát triển với Leica - LEICA VARIO-SUMMICRON 1:1,9-2,2/15-50 mm ASPH. Ống kính này đạt được sự cân bằng tinh tế giữa hiệu suất quang học, kích thước ống kính và độ bền khi chụp ảnh trên thiết bị di động, đồng thời khôi phục cảm giác ánh sáng một cách chân thực hơn để ghi lại câu chuyện trung thực;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail4">
+                    <div class="leica">
+                        <div class="goup sec7">
+                            <img class="img1" src="assets/img/13T/leica.webp" alt="">
+                            <div class="h1">Hệ thống camera Leica chuyên nghiệp là bước nhảy vọt về khả năng chụp ảnh</div>
+                        </div>
+                    </div>
+                    <div class="camera camera1">
+                        <div>
+                            <div class="h1">Camera chính Leica
+                                Ống kính quang học chuyên nghiệp của Leica
+                            </div>
+                            <div class="h2">
+                                <div>50MP</div>
+                                <div>Độ dài tiêu cự tương đương 24mm</div>
+                                <div>Khẩu độ f/1.9</div>
+                                <div>Chống rung quang học OIS</div>
+                            </div>
+                        </div>
+                        <img class="cam cam1" src="assets/img/13T/camera2.png" alt="">  
+                    </div>
+                    <div class="camera2">
+                        <div>
+                            <div class="h1">
+                                Camera chụp xa Leica
+                            </div>
+                            <div class="h2">
+                                <div>50MP</div>
+                                <div>Độ dài tiêu cự tương đương 50mm</div>
+                                <div>Khẩu độ f/1.9</div>
+                            </div>
+                        </div>
+                        <img class="cam cam2" src="assets/img/13T/camera3.png" alt="">  
+                    </div>
+                    <div class="camera3">
+                        <div>
+                            <div class="h1">
+                                Camera góc siêu rộng Leica
+                            </div>
+                            <div class="h2">
+                                <div>12MP</div>
+                                <div>Độ dài tiêu cự tương đương 15mm</div>
+                                <div>Khẩu độ f/2,2</div>
+                            </div>
+                        </div>
+                        <img class="cam cam3" src="assets/img/13T/camera4.png" alt="">  
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div id="footer">
+            <div class="footer1">
+                <div class="help">
+                    <li><a href=""><span>HỖ TRỢ</span></a></li>
+                    <li><a href="">Hướng dẫn sử dụng</a></li>
+                    <a href="">Bảo hành</h4></a>
+                    <a href="">Email</a>
+                </div>
+                <div class="about">
+                    <a href=""><span>GIỚI THIỆU</span></a>
+                    <a href="">Xiaomi</a>
+                    <a href="">Chính sách riêng tư</a>
+                    <a href="">MIUI</a>
+                </div>
+            </div>
+            <div class="follow">
+                <div class="row1">
+                    <a href="" class="MIfollow"><span>THEO DÕI MI</span></a>
+                    <li class="brandicons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </div>
+                <div class="row2">
+                    <a><span>HÃY ĐỂ CHÚNG TÔI LIÊN LẠC VỚI BẠN</span></a>
+                    <li><input type="text" placeholder="Email/số điện thoại"></li>
+                </div>
+            </div>
+            <div class="endline"></div> 
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="13T.js"></script>
+

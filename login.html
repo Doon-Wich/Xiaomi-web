@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <!--[if lt IE 9]>
+         <script> src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"</script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <div id="slider">
+
+        </div>
+        <div id="header">
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <h3 class="account">Tài Khoản Xiaomi</h3>
+        </div>
+        <div id="content">
+            <div id="login-container">
+                <div>
+                    <ul class="login-nav">
+                        <li>
+                            <div onclick="signbtn()"><h2>Đăng nhập</h2></div>
+                        </li>
+                        <li>
+                            <div onclick="registerbtn()"><h2>Đăng kí</h2></div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="signin">
+                    <input type="text" placeholder="Email / số điện thoại">
+                    <input type="text" placeholder="Mật khẩu">
+                    <button class="logintab">
+                        <h3>Đăng nhập</h3>
+                    </button>
+                    <button class="gglogin">
+                        <img src="assets/img/gglogo.png" alt="">
+                        <h3>Đăng nhập bằng Google</h3>
+                    </button>
+                    <div class="more">
+                        <a href="">Quên mật khẩu ?</a>
+                        <a class="options" href="">Thêm tuỳ chọn</a>
+                        <a class="fblogo" href=""><img class="fbimg" src="assets/img/fblogo.png" alt=""></a>
+                    </div>
+                </div>
+                <div id="register">
+                    <input type="text" placeholder="Tên đăng nhập">
+                    <input type="text" placeholder="Email / số điện thoại">
+                    <input type="text" placeholder="Mật khẩu">
+                    <input type="text" placeholder="Nhập lai mật khẩu"> 
+                    <button class="registertab"><h3>Đăng kí</h3></button>
+                    <div class="checknav">   
+                        <input type="checkbox" id="check">
+                        <label for="check"><span>Tôi đã đọc và đồng ý với Thoả thuận Người dùng</span></label>
+                    </div> 
+                </div>
+                <script>
+                    function registerbtn(){
+                        var x=document.getElementById("signin");
+                        var y=document.getElementById("register");
+                            x.style.display = "none";
+                            y.style.display = "block";
+                    }
+                    function signbtn(){
+                        var x=document.getElementById("signin");
+                        var y=document.getElementById("register");
+                            x.style.display = "block";
+                            y.style.display = "none";
+                    }
+                </script>
+               
+            </div>
+        </div>    
+</body>
+</html>

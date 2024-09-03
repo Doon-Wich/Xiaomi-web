@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+#html{
+}
+
+#wrapper{
+    display: flex;
+}
+
+#slider{
+    width: 28.2vw;
+    height: 60vw;
+    background: url('/assets/img/login.jpg') top 0 left / cover no-repeat
+}
+
+#header{
+    display: flex;
+    height: 4vw;    
+}
+
+#header .fa-house{
+    padding: 20px;
+    font-size: 30px;
+    color: #FC6800;
+}
+
+#header .account{
+    padding-top: 24px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#content{
+    
+}
+
+#content > #login-container{
+    display: block;
+    margin-top: 16vw;
+    margin-left: 8vw;
+    height: 30vw;
+    width: 25vw;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    position:  relative;
+}
+
+#login-container .login-nav{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 28px;
+    
+}
+
+#login-container .login-nav h2:hover{
+    border-bottom: solid 2px #000;
+}
+
+#login-container #signin button,
+#login-container #signin input{
+    height: 40px;
+    width: 18vw;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+    margin-top: 20px;
+}
+
+#login-container #signin input{
+border: solid 2px #fff;
+}
+
+#login-container #signin{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logintab{
+    border: solid 0;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    background-color: #EB7927D1;
+}
+
+.gglogin{
+    position: relative;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.gglogin img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 40px;
+    height: auto;
+}
+
+#signin .more a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.more .options{
+    text-align: center;
+}
+
+.more .fbimg{
+    max-width: 30px;
+    height: auto;
+}
+
+#signin > .more > .fblogo{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#register{
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#register button,
+#register input{
+    height: 40px;
+    width: 18vw;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+    margin-top: 20px;
+    border: 0px;
+}
+
+#register .registertab{
+    border: solid 0;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    background-color: #EB7927D1;
+}
+
+#register #check{
+    max-width: 18px;
+}
+
+#register span{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    *{
+        font-size: 2.8vw;
+    }
+
+    #login-container .login-nav h2{
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+    #slider{
+        width: 40vw;
+        height: 134vw;
+        background: url('/assets/img/login.jpg') top 0 left / cover no-repeat
+    }
+
+    #content > #login-container{
+        margin-top: 25vw;
+        margin-left: -30vw;
+        height: 80vw;
+        width: 50vw;
+    }
+    #login-container #signin button,
+    #login-container #signin input{
+        height: 6vw;
+        width: 45vw;
+        margin-top: 6vw;
+        border-radius: 2vw;
+    }
+    .more .fbimg{
+        max-width: 5vw;
+        height: auto;
+    }
+
+    #register button,
+    #register input{
+        height: 6vw;
+        width: 45vw;
+        margin-top: 4vw;
+        border-radius: 2vw;
+    }
+    #register #check{
+        max-width: 4vw;
+    }
+    
+    #register span{
+        font-size: 2.2vw;
+        padding-left: 2vw;
+    }
+}
+
+@media only screen and (max-width: 85.375em) and (min-width: 63.9375em){
+    *{
+        font-size: 2.8vw;
+    }
+
+    #login-container .login-nav h2{
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+    #slider{
+        width: 40vw;
+        height: 134vw;
+        background: url('/assets/img/login.jpg') top 0 left / cover no-repeat
+    }
+
+    #content > #login-container{
+        margin-top: 25vw;
+        margin-left: -20vw;
+        height: 80vw;
+        width: 50vw;
+    }
+    #login-container #signin button,
+    #login-container #signin input{
+        height: 6vw;
+        width: 45vw;
+        margin-top: 6vw;
+        border-radius: 2vw;
+    }
+    .more .fbimg{
+        max-width: 5vw;
+        height: auto;
+    }
+
+    #register button,
+    #register input{
+        height: 6vw;
+        width: 45vw;
+        margin-top: 4vw;
+        border-radius: 2vw;
+    }
+    #register #check{
+        max-width: 4vw;
+    }
+    
+    #register span{
+        font-size: 2.2vw;
+        padding-left: 2vw;
+    }
+}  
+
+
